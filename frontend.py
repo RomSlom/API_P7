@@ -1,4 +1,5 @@
 import streamlit as st
+import st_pages
 from st_pages import show_pages_from_config, add_page_title
 import pandas as pd
 import numpy as np
