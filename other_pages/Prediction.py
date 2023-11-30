@@ -5,7 +5,7 @@ from urllib.request import urlopen
 import json
 
 # load our best model
-PATH = "C:\Users\DELL\Formation OC\API_P7\Datas\"
+# PATH = "C:\Users\DELL\Formation OC\API_P7\Datas\"
 
 #Load Dataframe
 
