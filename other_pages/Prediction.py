@@ -5,9 +5,10 @@ from urllib.request import urlopen
 import json
 
 # load our best model
-PATH = "C:/Users/DELL/Formation OC/API_P7/Datas/"
+PATH = "C:\Users\DELL\Formation OC\API_P7\Datas"
 
 #Load Dataframe
+
 
 # X_test=pd.read_csv(PATH+'X_test.csv')
 # y_test=pd.read_csv(PATH+'y_test.csv')
