@@ -35,7 +35,7 @@ with model_training:
    
        
     model_selection_column, display_column = st.columns(2)
-    test_clients = pd.read_csv(PATH+'dFreduced.csv')
+    test_clients = pd.read_csv('./Datas/dFreduced.csv')
     liste_id = test_clients['SK_ID_CURR'].tolist()
 
      # Choose a client
