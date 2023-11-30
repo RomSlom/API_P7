@@ -1,0 +1,14 @@
+[[pages]]
+path = "other_pages/Overview.py"
+name = "Overview"
+icon = "🏠"
+
+[[pages]]
+path = "other_pages/Prediction.py"
+name = "Prediction"
+icon = ":books:"
+
+[[pages]]
+path = "other_pages/Explanations.py"
+name = "Explanations and Comparisonsss"
+icon = ":books:"
