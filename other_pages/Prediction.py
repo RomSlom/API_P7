@@ -112,7 +112,7 @@ with model_training:
                                         'thickness': 0.8,
                                         # Score du client en %
                                         # df_dashboard['SCORE_CLIENT_%']
-                                        'value': y_proba_client}})
+                                        'value': dict_final['proba'])*100}})
 
             fig.update_layout(paper_bgcolor='white',
                                 height=400, width=600,
