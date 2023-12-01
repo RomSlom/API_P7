@@ -86,7 +86,7 @@ with model_training:
                 mode = "gauge+number+delta",
                 value = dict_final['proba']*100,
                 domain = {'x': [0, 1], 'y': [0, 1]},
-                delta = {'reference': 380},
+                delta = {'reference': 100},
     
                  title = {'text': "Confidence"}))
 
@@ -94,7 +94,7 @@ with model_training:
                                 height=400, width=600,
                                 font={'color': 'darkblue', 'family': 'Arial'})
 
-        fig.show()
+        st.plotly_chart(fig, use_container_width=True)
 
 
         #   classe_predite = API_data["prediction"]
