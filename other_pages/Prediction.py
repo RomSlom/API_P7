@@ -79,9 +79,10 @@ with model_training:
 
                 
             chaine = 'Prédiction : **' + resultat +  '** avec **' + str(round((1-dict_final['proba'])*100)) + '%** de risque d''erreur '
+            
             st.markdown(chaine)
 
-            fig = go.Figure(go.Indicator(
+        fig = go.Figure(go.Indicator(
                 mode = "gauge+number+delta",
                 value = dict_final['proba']*100,
                 domain = {'x': [0, 1], 'y': [0, 1]},
@@ -89,11 +90,11 @@ with model_training:
     
                  title = {'text': "Confidence"}))
 
-            fig.update_layout(paper_bgcolor='white',
+        fig.update_layout(paper_bgcolor='white',
                                 height=400, width=600,
                                 font={'color': 'darkblue', 'family': 'Arial'})
 
-            fig.show()
+        fig.show()
 
 
         #   classe_predite = API_data["prediction"]
