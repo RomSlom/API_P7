@@ -79,6 +79,48 @@ with model_training:
                 
             chaine = 'Prédiction : **' + resultat +  '** avec **' + str(round((1-dict_final['proba'])*100)) + '%** de risque d''erreur '
             st.markdown(chaine)
+
+            fig = go.Figure(go.Indicator(
+                    mode = 'gauge+number+delta',
+                    
+                    value = dict_final['proba'])*100,
+
+                    domain = {'x': [0, 1], 'y': [0, 1]},
+
+                    title = {'text': 'Crédit score du client', 'font': {'size': 24}},
+
+                    # Score des 10 voisins test set
+                    # df_dashboard['SCORE_10_VOISINS_MEAN_TEST']
+
+                    delta = {'reference': 76,
+                            'increasing': {'color': 'Crimson'},
+                            'decreasing': {'color': 'Green'}},
+
+                    gauge = {'axis': {'range': [None, 100],
+                                    'tickwidth': 3,
+                                    'tickcolor': 'darkblue'},
+                            'bar': {'color': 'white', 'thickness' : 0.25},
+                            'bgcolor': 'white',
+                            'borderwidth': 2,
+                            'bordercolor': 'gray',
+                            'steps': [{'range': [0, 25], 'color': 'Green'},
+                                    {'range': [25, 49.49], 'color': 'LimeGreen'},
+                                    {'range': [49.5, 50.5], 'color': 'red'},
+                                    {'range': [50.51, 75], 'color': 'Orange'},
+                                    {'range': [75, 100], 'color': 'Crimson'}],
+                            'threshold': {'line': {'color': 'white', 'width': 10},
+                                        'thickness': 0.8,
+                                        # Score du client en %
+                                        # df_dashboard['SCORE_CLIENT_%']
+                                        'value': y_proba_client}})
+
+            fig.update_layout(paper_bgcolor='white',
+                                height=400, width=600,
+                                font={'color': 'darkblue', 'family': 'Arial'})
+
+            fig.show()
+
+
         #   classe_predite = API_data["prediction"]
         #   if classe_predite == 1:
         #       resultat = "client dangereux"
