@@ -3,3 +3,4 @@ pandas
 st-pages
 lightgbm
 scikit-learn
+plotly
