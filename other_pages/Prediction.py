@@ -88,7 +88,7 @@ with model_training:
                 domain = {'x': [0, 1], 'y': [0, 1]},
                 delta = {'reference': 100},
     
-                 title = {'text': "Confidence"}))
+                title = {'text': "Confidence"}))
 
         fig.update_layout(paper_bgcolor='white',
                                 height=400, width=600,
