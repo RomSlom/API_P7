@@ -69,7 +69,7 @@ sidebar_selection = st.sidebar.radio(
 
 
 with header:
-    st.title("Make sure a client is your sure client!") 
+    st.title("Make sure a client is  sure client!") 
     
 
     
